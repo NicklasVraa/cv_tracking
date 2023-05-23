@@ -3,7 +3,7 @@ Authors: Nicklas Vraa, Mathias Vraa
 
 This repository accompanies our final report in the course "Computer Vision" at Aarhus University, where we attempt to explore and understand state-of-the-art algorithms for multi-object tracking.
 
-This repository enables the reader to reproduce the results that are described in our report.
+This repository enables the reader to reproduce the results that are described in our report, as well as trying a live demo of each of the tracking algorithms.
 
 ## Environment Setup (Linux, recommended)
 Reproducing the environment in which we did our tests is paramount for the code to be able to run. It was tested on Debian-based Linux using python 3.10. We have included a list of [required](requirements.txt) packages, which can be installed easily using pip.
