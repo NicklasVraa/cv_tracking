@@ -78,3 +78,7 @@ This section details how to use this repository, when inside the dedicated virtu
 
 ### Reproducing our exact measurements
 Run the evaluation script using `--detector yolov8x.pt` and one of the trackers on a particular benchmark. Depending on your GPU, it may take several hours to complete all evaluations. Remember to activate your environment and have the working directory be the root of this repository. If your hardware supports it, multiple threads can be used, which will speed up evaluation, but also print outputs multiple times. This is done by adding the `--threads` argument.
+
+| StrongSORT | BoT-SORT | Deep OC-SORT |
+|------------|----------|--------------|
+| ![1](resources/strongsort_demo.gif) |
