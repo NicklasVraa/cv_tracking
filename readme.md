@@ -81,4 +81,4 @@ Run the evaluation script using `--detector yolov8x.pt` and one of the trackers 
 
 | StrongSORT | BoT-SORT | Deep OC-SORT |
 |------------|----------|--------------|
-| ![1](resources/strongsort_demo.gif) |
+| ![1](resources/strongsort_demo.gif) | ![2](resources/botsort_demo.gif) | ![3](resources/deepocsort_demo.gif) |
