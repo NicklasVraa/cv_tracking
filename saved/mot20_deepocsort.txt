@@ -1,0 +1,82 @@
+
+Eval Config:
+USE_PARALLEL         : True                          
+NUM_PARALLEL_CORES   : 4                             
+BREAK_ON_ERROR       : True                          
+RETURN_ON_ERROR      : False                         
+LOG_ON_ERROR         : /home/nv/Studies/sem8/cv/cv_tracking/eval_tools/error_log.txt
+PRINT_RESULTS        : True                          
+PRINT_ONLY_COMBINED  : False                         
+PRINT_CONFIG         : True                          
+TIME_PROGRESS        : True                          
+DISPLAY_LESS_PROGRESS : False                         
+OUTPUT_SUMMARY       : True                          
+OUTPUT_EMPTY_CLASSES : True                          
+OUTPUT_DETAILED      : True                          
+PLOT_CURVES          : True                          
+
+MotChallenge2DBox Config:
+PRINT_CONFIG         : True                          
+GT_FOLDER            : eval_tools/data/MOT20/train   
+TRACKERS_FOLDER      : /home/nv/Studies/sem8/cv/cv_tracking/eval_tools/data/trackers/mot_challenge/
+OUTPUT_FOLDER        : None                          
+TRACKERS_TO_EVAL     : ['MOT20']                     
+CLASSES_TO_EVAL      : ['pedestrian']                
+BENCHMARK            : MOT20                         
+SPLIT_TO_EVAL        : train                         
+INPUT_AS_ZIP         : False                         
+DO_PREPROC           : True                          
+TRACKER_SUB_FOLDER   : run12/data                    
+OUTPUT_SUB_FOLDER    :                               
+TRACKER_DISPLAY_NAMES : None                          
+SEQMAP_FOLDER        : None                          
+SEQMAP_FILE          : None                          
+SEQ_INFO             : {'MOT20-02': None, 'MOT20-05': None, 'MOT20-03': None, 'MOT20-01': None}
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.txt   
+SKIP_SPLIT_FOL       : True                          
+
+CLEAR Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity'] 
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Identity Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity'] 
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Evaluating 1 tracker(s) on 4 sequence(s) for 1 class(es) on MotChallenge2DBox dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating MOT20
+
+
+All sequences for MOT20 finished in 6.13 seconds
+
+HOTA: MOT20-pedestrian             HOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT20-01                           33.916    29.024    40.08     30.027    79.057    45.184    65.95     82.514    34.578    41.867    78.139    32.715    
+MOT20-02                           24.783    23.382    26.487    24.125    78.487    29.226    68.061    82.811    25.216    30.371    78.664    23.891    
+MOT20-03                           14.053    9.6246    20.579    9.7501    73.291    21.607    74.225    78.49     14.15     18.664    73.421    13.703    
+MOT20-05                           4.0648    1.4964    11.067    1.4981    83.18     11.325    81.879    84.307    4.0673    4.7906    81.827    3.92      
+COMBINED                           13.129    7.2934    23.862    7.3649    77.031    25.931    72.617    81.363    13.202    16.327    76.957    12.565    
+
+CLEAR: MOT20-pedestrian            MOTA      MOTP      MODA      CLR_Re    CLR_Pr    MTR       PTR       MLR       sMOTA     CLR_TP    CLR_FN    CLR_FP    IDSW      MT        PT        ML        Frag      
+MOT20-01                           34.298    80.081    35.667    36.824    96.952    20.27     35.135    44.595    26.963    7317      12553     230       272       15        26        33        425       
+MOT20-02                           26.894    80.424    27.732    29.235    95.11     10.741    48.519    40.741    21.171    45239     109503    2326      1296      29        131       110       2300      
+MOT20-03                           12.044    74.563    12.242    12.773    96.012    0.2849    21.51     78.205    8.795     40063     273595    1664      622       2         151       549       5517      
+MOT20-05                           1.7402    82.243    1.7769    1.789     99.33     0         2.3952    97.605    1.4226    11563     634781    78        237       0         28        1141      1963      
+COMBINED                           8.5894    78.348    8.8033    9.1822    96.038    2.0767    15.169    82.754    6.6013    104182    1030432   4298      2427      46        336       1833      10205     
+
+Identity: MOT20-pedestrian         IDF1      IDR       IDP       IDTP      IDFN      IDFP      
+MOT20-01                           38.589    26.623    70.094    5290      14580     2257      
+MOT20-02                           32.144    21.012    68.359    32515     122227    15050     
+MOT20-03                           19.466    11.028    82.894    34589     279069    7138      
+MOT20-05                           2.8435    1.4474    80.363    9355      636989    2286      
+COMBINED                           13.153    7.205     75.359    81749     1052865   26731     
+
+Count: MOT20-pedestrian            Dets      GT_Dets   IDs       GT_IDs    
+MOT20-01                           7547      19870     76        74        
+MOT20-02                           47565     154742    483       270       
+MOT20-03                           41727     313658    787       702       
+MOT20-05                           11641     646344    423       1169      
+COMBINED                           108480    1134614   1769      2215      

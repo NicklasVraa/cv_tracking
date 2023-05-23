@@ -1,0 +1,95 @@
+Error importing BURST due to missing underlying dependency: No module named 'pycocotools'
+
+Eval Config:
+USE_PARALLEL         : True
+NUM_PARALLEL_CORES   : 4
+BREAK_ON_ERROR       : True
+RETURN_ON_ERROR      : False
+LOG_ON_ERROR         : /home/nv/Studies/sem8/cv/cv_tracking/eval_tools/error_log.txt
+PRINT_RESULTS        : True
+PRINT_ONLY_COMBINED  : False
+PRINT_CONFIG         : True
+TIME_PROGRESS        : True
+DISPLAY_LESS_PROGRESS : False
+OUTPUT_SUMMARY       : True
+OUTPUT_EMPTY_CLASSES : True
+OUTPUT_DETAILED      : True
+PLOT_CURVES          : True
+
+MotChallenge2DBox Config:
+PRINT_CONFIG         : True
+GT_FOLDER            : eval_tools/data/MOT17/train
+TRACKERS_FOLDER      : /home/nv/Studies/sem8/cv/cv_tracking/eval_tools/data/trackers/mot_challenge/
+OUTPUT_FOLDER        : None
+TRACKERS_TO_EVAL     : ['MOT17']
+CLASSES_TO_EVAL      : ['pedestrian']
+BENCHMARK            : MOT17
+SPLIT_TO_EVAL        : train
+INPUT_AS_ZIP         : False
+DO_PREPROC           : True
+TRACKER_SUB_FOLDER   : run4/data
+OUTPUT_SUB_FOLDER    :
+TRACKER_DISPLAY_NAMES : None
+SEQMAP_FOLDER        : None
+SEQMAP_FILE          : None
+SEQ_INFO             : {'MOT17-02-FRCNN': None, 'MOT17-04-FRCNN': None, 'MOT17-05-FRCNN': None, 'MOT17-09-FRCNN': None, 'MOT17-10-FRCNN': None, 'MOT17-11-FRCNN': None, 'MOT17-13-FRCNN': None}
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.txt
+SKIP_SPLIT_FOL       : True
+
+CLEAR Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity']
+THRESHOLD            : 0.5
+PRINT_CONFIG         : True
+
+Identity Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity']
+THRESHOLD            : 0.5
+PRINT_CONFIG         : True
+
+Evaluating 1 tracker(s) on 7 sequence(s) for 1 class(es) on MotChallenge2DBox dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating MOT17
+
+
+All sequences for MOT17 finished in 1.40 seconds
+
+HOTA: MOT17-pedestrian             HOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT17-02-FRCNN                     30.275    26.18     35.214    27.113    81.85     44.149    56.221    85.848    30.853    35.998    81.123    29.203
+MOT17-04-FRCNN                     40.181    34.065    47.467    35.781    81.437    55.084    68.125    85.875    41.209    49.793    80.134    39.901
+MOT17-05-FRCNN                     34.913    43.226    28.476    49.317    65.463    51.234    37.806    77.84     37.435    51.323    68.342    35.075
+MOT17-09-FRCNN                     45.568    56.572    36.911    62.949    76.653    49.492    52.434    83.921    48.184    58.367    78.538    45.841
+MOT17-10-FRCNN                     37.807    45.239    31.827    49.462    71.837    45.47     49.258    79.65     39.645    51.438    72.901    37.499
+MOT17-11-FRCNN                     46.111    51.41     41.698    60.127    72.312    58.946    59.946    85.082    50.019    57.477    78.368    45.044
+MOT17-13-FRCNN                     36.805    35.017    38.992    36.946    76.67     50.374    55.092    82.144    37.895    46.32     77.113    35.719
+COMBINED                           38.785    37.405    40.512    40.199    76.604    52.323    59.048    83.73     40.303    48.976    77.514    37.963
+
+CLEAR: MOT17-pedestrian            MOTA      MOTP      MODA      CLR_Re    CLR_Pr    MTR       PTR       MLR       sMOTA     CLR_TP    CLR_FN    CLR_FP    IDSW      MT        PT        ML        Frag
+MOT17-02-FRCNN                     29.153    83.966    29.692    31.408    94.817    11.29     33.871    54.839    24.117    5836      12745     319       100       7         21        34        189
+MOT17-04-FRCNN                     34.874    85.081    35.093    39.515    89.935    16.867    33.735    49.398    28.979    18792     28765     2103      104       14        28        41        406
+MOT17-05-FRCNN                     41.969    74.942    43.617    59.477    78.948    23.308    57.143    19.549    27.065    4114      2803      1097      114       31        76        26        200
+MOT17-09-FRCNN                     63.437    82.061    64.357    73.239    89.184    50        46.154    3.8462    50.298    3900      1425      473       49        13        12        1         59
+MOT17-10-FRCNN                     51.546    76.723    52.559    60.706    88.167    29.825    52.632    17.544    37.415    7794      5045      1046      130       17        30        10        358
+MOT17-11-FRCNN                     49.173    84.48     49.64     66.395    79.85     33.333    26.667    40        38.869    6265      3171      1581      44        25        20        30        53
+MOT17-13-FRCNN                     40.491    79.666    41.385    44.786    92.941    20        35.455    44.545    31.384    5214      6428      396       104       22        39        49        257
+COMBINED                           39.409    82.054    39.983    46.23     88.096    23.626    41.392    34.982    31.112    51915     60382     7015      645       129       226       191       1522
+
+Identity: MOT17-pedestrian         IDF1      IDR       IDP       IDTP      IDFN      IDFP
+MOT17-02-FRCNN                     31.67     21.081    63.639    3917      14664     2238
+MOT17-04-FRCNN                     43.111    31.026    70.615    14755     32802     6140
+MOT17-05-FRCNN                     41.59     36.461    48.398    2522      4395      2689
+MOT17-09-FRCNN                     54.155    49.315    60.05     2626      2699      1747
+MOT17-10-FRCNN                     46.367    39.146    56.855    5026      7813      3814
+MOT17-11-FRCNN                     51.915    47.541    57.176    4486      4950      3360
+MOT17-13-FRCNN                     42.708    31.644    65.668    3684      7958      1926
+COMBINED                           43.236    32.963    62.814    37016     75281     21914
+
+Count: MOT17-pedestrian            Dets      GT_Dets   IDs       GT_IDs
+MOT17-02-FRCNN                     6155      18581     31        62
+MOT17-04-FRCNN                     20895     47557     63        83
+MOT17-05-FRCNN                     5211      6917      70        133
+MOT17-09-FRCNN                     4373      5325      32        26
+MOT17-10-FRCNN                     8840      12839     48        57
+MOT17-11-FRCNN                     7846      9436      55        75
+MOT17-13-FRCNN                     5610      11642     55        110
+COMBINED                           58930     112297    354       546

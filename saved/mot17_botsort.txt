@@ -1,0 +1,94 @@
+
+Eval Config:
+USE_PARALLEL         : True                          
+NUM_PARALLEL_CORES   : 4                             
+BREAK_ON_ERROR       : True                          
+RETURN_ON_ERROR      : False                         
+LOG_ON_ERROR         : /home/nv/Studies/sem8/cv/cv_tracking/eval_tools/error_log.txt
+PRINT_RESULTS        : True                          
+PRINT_ONLY_COMBINED  : False                         
+PRINT_CONFIG         : True                          
+TIME_PROGRESS        : True                          
+DISPLAY_LESS_PROGRESS : False                         
+OUTPUT_SUMMARY       : True                          
+OUTPUT_EMPTY_CLASSES : True                          
+OUTPUT_DETAILED      : True                          
+PLOT_CURVES          : True                          
+
+MotChallenge2DBox Config:
+PRINT_CONFIG         : True                          
+GT_FOLDER            : eval_tools/data/MOT17/train   
+TRACKERS_FOLDER      : /home/nv/Studies/sem8/cv/cv_tracking/eval_tools/data/trackers/mot_challenge/
+OUTPUT_FOLDER        : None                          
+TRACKERS_TO_EVAL     : ['MOT17']                     
+CLASSES_TO_EVAL      : ['pedestrian']                
+BENCHMARK            : MOT17                         
+SPLIT_TO_EVAL        : train                         
+INPUT_AS_ZIP         : False                         
+DO_PREPROC           : True                          
+TRACKER_SUB_FOLDER   : run5/data                     
+OUTPUT_SUB_FOLDER    :                               
+TRACKER_DISPLAY_NAMES : None                          
+SEQMAP_FOLDER        : None                          
+SEQMAP_FILE          : None                          
+SEQ_INFO             : {'MOT17-02-FRCNN': None, 'MOT17-04-FRCNN': None, 'MOT17-05-FRCNN': None, 'MOT17-09-FRCNN': None, 'MOT17-10-FRCNN': None, 'MOT17-11-FRCNN': None, 'MOT17-13-FRCNN': None}
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.txt   
+SKIP_SPLIT_FOL       : True                          
+
+CLEAR Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity'] 
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Identity Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity'] 
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Evaluating 1 tracker(s) on 7 sequence(s) for 1 class(es) on MotChallenge2DBox dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating MOT17
+
+
+All sequences for MOT17 finished in 1.55 seconds
+
+HOTA: MOT17-pedestrian             HOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT17-02-FRCNN                     27.681    29.298    26.402    30.611    80.077    29.411    69.032    84.956    28.356    33.323    80.001    26.659    
+MOT17-04-FRCNN                     44.881    39.626    50.954    42.066    81.155    56.178    78.395    85.985    46.291    55.605    79.833    44.391    
+MOT17-05-FRCNN                     37.396    43.628    32.512    50.461    64.482    40.702    54.052    77.788    40.419    54.402    67.959    36.971    
+MOT17-09-FRCNN                     41.718    54.817    31.917    62.419    74.126    40.394    61.065    83.831    44.619    53.334    78.329    41.776    
+MOT17-10-FRCNN                     40.147    47.558    34.146    52.335    71.642    40.769    61.235    79.646    42.238    54.287    72.945    39.599    
+MOT17-11-FRCNN                     51.687    49.615    54.302    61.809    66.42     62.945    73.829    84.499    57.873    65.843    76.578    50.421    
+MOT17-13-FRCNN                     42.111    41.73     42.866    44.425    76.26     48.586    67.61     81.775    43.572    53.222    77.124    41.047    
+COMBINED                           41.968    40.983    43.352    44.73     75.43     49.498    71.251    83.649    43.968    53.12     77.176    40.996    
+
+CLEAR: MOT17-pedestrian            MOTA      MOTP      MODA      CLR_Re    CLR_Pr    MTR       PTR       MLR       sMOTA     CLR_TP    CLR_FN    CLR_FP    IDSW      MT        PT        ML        Frag      
+MOT17-02-FRCNN                     31.855    83.018    33.76     35.994    94.157    9.6774    40.323    50        25.743    6688      11893     415       354       6         25        31        403       
+MOT17-04-FRCNN                     40.133    85.337    40.614    46.225    89.177    20.482    39.759    39.759    33.355    21983     25574     2668      229       17        33        33        697       
+MOT17-05-FRCNN                     36.577    75.037    43.964    61.11     78.09     20.301    66.917    12.782    21.322    4227      2690      1186      511       27        89        17        337       
+MOT17-09-FRCNN                     55.962    82.109    60.77     72.488    86.084    46.154    50        3.8462    42.994    3860      1465      624       256       12        13        1         127       
+MOT17-10-FRCNN                     51.608    76.79     54.514    63.782    87.312    29.825    59.649    10.526    36.805    8189      4650      1190      373       17        34        6         666       
+MOT17-11-FRCNN                     41.469    84.205    42.274    67.666    72.714    36        28        36        30.781    6385      3051      2396      76        27        21        27        108       
+MOT17-13-FRCNN                     47.956    79.118    50.644    54.449    93.468    25.455    42.727    31.818    36.586    6339      5303      443       313       28        47        35        469       
+COMBINED                           41.53     82.075    43.411    51.356    86.602    24.542    47.985    27.473    32.324    57671     54626     8922      2112      134       262       150       2807      
+
+Identity: MOT17-pedestrian         IDF1      IDR       IDP       IDTP      IDFN      IDFP      
+MOT17-02-FRCNN                     32.409    22.399    58.595    4162      14419     2941      
+MOT17-04-FRCNN                     51.008    38.724    74.707    18416     29141     6235      
+MOT17-05-FRCNN                     48.938    43.617    55.736    3017      3900      2396      
+MOT17-09-FRCNN                     48.078    44.282    52.587    2358      2967      2126      
+MOT17-10-FRCNN                     49.5      42.83     58.631    5499      7340      3880      
+MOT17-11-FRCNN                     57.452    55.458    59.595    5233      4203      3548      
+MOT17-13-FRCNN                     53.528    42.355    72.707    4931      6711      1851      
+COMBINED                           48.763    38.84     65.496    43616     68681     22977     
+
+Count: MOT17-pedestrian            Dets      GT_Dets   IDs       GT_IDs    
+MOT17-02-FRCNN                     7103      18581     114       62        
+MOT17-04-FRCNN                     24651     47557     126       83        
+MOT17-05-FRCNN                     5413      6917      165       133       
+MOT17-09-FRCNN                     4484      5325      102       26        
+MOT17-10-FRCNN                     9379      12839     131       57        
+MOT17-11-FRCNN                     8781      9436      164       75        
+MOT17-13-FRCNN                     6782      11642     155       110       
+COMBINED                           66593     112297    957       546       

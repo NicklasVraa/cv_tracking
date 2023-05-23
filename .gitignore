@@ -1,0 +1,9 @@
+cache/
+results/
+weights/
+eval_tools/data/MOT16/
+eval_tools/data/MOT17/
+eval_tools/data/MOT20/
+eval_tools/data/trackers/mot_challenge/
+__pycache__/
+venv/

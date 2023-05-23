@@ -1,0 +1,94 @@
+
+Eval Config:
+USE_PARALLEL         : True                          
+NUM_PARALLEL_CORES   : 4                             
+BREAK_ON_ERROR       : True                          
+RETURN_ON_ERROR      : False                         
+LOG_ON_ERROR         : /home/nv/Studies/sem8/cv/cv_tracking/eval_tools/error_log.txt
+PRINT_RESULTS        : True                          
+PRINT_ONLY_COMBINED  : False                         
+PRINT_CONFIG         : True                          
+TIME_PROGRESS        : True                          
+DISPLAY_LESS_PROGRESS : False                         
+OUTPUT_SUMMARY       : True                          
+OUTPUT_EMPTY_CLASSES : True                          
+OUTPUT_DETAILED      : True                          
+PLOT_CURVES          : True                          
+
+MotChallenge2DBox Config:
+PRINT_CONFIG         : True                          
+GT_FOLDER            : eval_tools/data/MOT16/train   
+TRACKERS_FOLDER      : /home/nv/Studies/sem8/cv/cv_tracking/eval_tools/data/trackers/mot_challenge/
+OUTPUT_FOLDER        : None                          
+TRACKERS_TO_EVAL     : ['MOT16']                     
+CLASSES_TO_EVAL      : ['pedestrian']                
+BENCHMARK            : MOT16                         
+SPLIT_TO_EVAL        : train                         
+INPUT_AS_ZIP         : False                         
+DO_PREPROC           : True                          
+TRACKER_SUB_FOLDER   : run8/data                     
+OUTPUT_SUB_FOLDER    :                               
+TRACKER_DISPLAY_NAMES : None                          
+SEQMAP_FOLDER        : None                          
+SEQMAP_FILE          : None                          
+SEQ_INFO             : {'MOT16-05': None, 'MOT16-04': None, 'MOT16-13': None, 'MOT16-09': None, 'MOT16-10': None, 'MOT16-11': None, 'MOT16-02': None}
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.txt   
+SKIP_SPLIT_FOL       : True                          
+
+CLEAR Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity'] 
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Identity Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity'] 
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Evaluating 1 tracker(s) on 7 sequence(s) for 1 class(es) on MotChallenge2DBox dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating MOT16
+
+
+All sequences for MOT16 finished in 1.48 seconds
+
+HOTA: MOT16-pedestrian             HOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT16-02                           31.402    30.44     32.746    31.863    80.099    35.582    71.917    85.001    32.206    37.432    80.025    29.955    
+MOT16-04                           44.195    39.616    49.435    42.056    81.16     54.87     77.63     85.994    45.588    54.78     79.832    43.732    
+MOT16-05                           36.566    43.443    31.138    50.644    63.718    40.726    51.459    77.728    39.649    53.596    67.853    36.367    
+MOT16-09                           40.527    52.591    31.468    61.857    70.6      36.647    60.461    83.423    44.082    52.267    77.155    40.326    
+MOT16-10                           40.255    47.883    34.133    53.503    70.089    41.169    60.796    79.468    42.691    54.84     72.452    39.733    
+MOT16-11                           51.884    50.105    54.187    63.425    65.496    63.164    72.781    84.531    58.562    66.192    76.595    50.7      
+MOT16-13                           41.815    41.714    42.332    44.886    74.984    49.121    66.186    81.849    43.507    52.561    77.201    40.578    
+COMBINED                           42.032    41.165    43.328    45.229    74.639    49.622    70.79     83.63     44.191    53.208    77.047    40.995    
+
+CLEAR: MOT16-pedestrian            MOTA      MOTP      MODA      CLR_Re    CLR_Pr    MTR       PTR       MLR       sMOTA     CLR_TP    CLR_FN    CLR_FP    IDSW      MT        PT        ML        Frag      
+MOT16-02                           32.95     83.107    34.958    37.369    93.939    11.111    46.296    42.593    26.637    6664      11169     430       358       6         25        23        399       
+MOT16-04                           40.103    85.346    40.602    46.21     89.177    20.482    39.759    39.759    33.332    21976     25581     2667      237       17        33        33        698       
+MOT16-05                           35.245    75.049    42.872    61.176    76.97     22.4      65.6      12        19.981    4171      2647      1248      520       28        82        15        315       
+MOT16-09                           53.472    82.036    58.322    72.969    83.283    52        44        4         40.363    3836      1421      770       255       13        11        1         122       
+MOT16-10                           50.341    76.706    53.523    64.929    85.058    29.63     62.963    7.4074    35.217    7998      4320      1405      392       16        34        4         638       
+MOT16-11                           41.302    84.226    42.01     69.424    71.691    40.58     28.986    30.435    30.351    6369      2805      2515      65        28        20        21        102       
+MOT16-13                           47.188    79.214    49.886    54.873    91.669    27.103    42.991    29.907    35.782    6283      5167      571       309       29        46        32        473       
+COMBINED                           41.261    82.111    43.196    51.896    85.642    26.499    48.549    24.952    31.977    57297     53110     9606      2136      137       251       129       2747      
+
+Identity: MOT16-pedestrian         IDF1      IDR       IDP       IDTP      IDFN      IDFP      
+MOT16-02                           37.004    25.862    65.013    4612      13221     2482      
+MOT16-04                           49.172    37.326    72.033    17751     29806     6892      
+MOT16-05                           46.122    41.39     52.076    2822      3996      2597      
+MOT16-09                           46.051    43.2      49.305    2271      2986      2335      
+MOT16-10                           49.979    44.066    57.726    5428      6890      3975      
+MOT16-11                           57.426    56.518    58.363    5185      3989      3699      
+MOT16-13                           53.049    42.402    70.835    4855      6595      1999      
+COMBINED                           48.417    38.878    64.159    42924     67483     23979     
+
+Count: MOT16-pedestrian            Dets      GT_Dets   IDs       GT_IDs    
+MOT16-02                           7094      17833     116       54        
+MOT16-04                           24643     47557     134       83        
+MOT16-05                           5419      6818      157       125       
+MOT16-09                           4606      5257      94        25        
+MOT16-10                           9403      12318     134       54        
+MOT16-11                           8884      9174      166       69        
+MOT16-13                           6854      11450     152       107       
+COMBINED                           66903     110407    953       517       
