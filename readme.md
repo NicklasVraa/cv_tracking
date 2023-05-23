@@ -83,4 +83,8 @@ Run the evaluation script using `--detector yolov8x.pt` and one of the trackers 
 | StrongSORT | BoT-SORT | Deep OC-SORT |
 |------------|----------|--------------|
 | ![1](resources/strongsort_demo.gif) | ![2](resources/botsort_demo.gif) | ![3](resources/deepocsort_demo.gif) |
-See the full-sized demos in resources folder.
+
+See the full-sized demos in resources folder, or try it on your own video by running:
+```bash
+python track.py <stack-args> --source path/to/video --save_conf --show
+```
