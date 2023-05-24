@@ -88,3 +88,4 @@ See the full-sized demos in the results folder, or try it on your own video by r
 ```bash
 python track.py <stack-args> --source path/to/video --save_conf --show
 ```
+The detections will only differ slightly as they are all using the YOLO detector, but their IDs vary significantly, even in an 8 second clip. 
